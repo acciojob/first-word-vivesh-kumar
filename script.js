@@ -1,7 +1,7 @@
 function firstWord(s) {
   // your code here
-	let patt =([^\s]+);
-	return patt.test(s);
+	let patt =s.slice(0, s.indexOf(" ") !== -1 ? s.indexOf(" ") : s.length);
+	return patt;
 }
 
 // Do not change the code below
@@ -9,4 +9,5 @@ function firstWord(s) {
 
 const s = prompt("Enter String:");
 alert(firstWord(s));
+
 
