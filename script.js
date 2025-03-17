@@ -1,7 +1,11 @@
 function firstWord(s) {
   // your code here
-	let patt =s.slice(0, s.indexOf(" ") !== -1 ? s.indexOf(" ") : s.length);
-	return patt;
+	s =s.trim();
+	let index = s.indexOf(' ');
+	if(index === -1){
+		return s;
+	}
+	return s.substring(0,index);
 }
 
 // Do not change the code below
@@ -9,5 +13,6 @@ function firstWord(s) {
 
 const s = prompt("Enter String:");
 alert(firstWord(s));
+
 
 
